@@ -1,15 +1,20 @@
 import React from 'react';
 import {notFound} from "next/navigation";
-import {getData} from "@/app/services/data/data";
+import {Data, N1, ServicesData,Root} from "@/app/services/data/data";
 import ServiceBody from "@/app/services/[service]/body";
 
 
-const  servicesData = getData().servicesData
-const servisesArr:[string] = Object.keys(servicesData)
+
+
+const  servicesData:any = Data.servicesData
+
+const servisesArr:string[] = Object.keys(servicesData)
 const Service = ({params}:{ params: { service: string } }) => {
     try {
+
         for (let i = 0; i <= servisesArr.length; i++){
-            if (getData().servicesData[i].href === params.service){
+            const hrefCheck = servicesData[i].href
+            if (hrefCheck === params.service){
 
                 return (
                     <ServiceBody data={servicesData[i]}/>

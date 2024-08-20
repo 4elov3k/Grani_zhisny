@@ -1,11 +1,11 @@
 import React from 'react';
 import Link from "next/link";
 import Image from "next/image";
-import {getData} from "@/app/services/data/data";
+import {Data} from "@/app/services/data/data";
 
-const Servise = ({id}) => {
+const Servise = ({id}:any) => {
 
-    const element = getData().servicesData[`${id}`]
+    const element:any = Data.servicesData[id]
 
     return (
         <div className="flex max-lg:flex-col max-sm: max-lg:items-center border my-4 p-4">

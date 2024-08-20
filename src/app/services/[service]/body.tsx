@@ -1,9 +1,15 @@
 import React from 'react';
-
-const ServiceBody = ({data}:{data:string}) => {
+type serviceData = {
+    h:string,
+    dis:string,
+    overview:string;
+    img?:string;
+    href?:string
+}
+const ServiceBody = ({data}: any) => {
     return (
         <div>
-            Hello im {data.h}
+            Hello {data.h}
         </div>
     );
 };

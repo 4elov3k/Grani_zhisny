@@ -2,8 +2,8 @@ import React from 'react';
 import Image from "next/image";
 import Link from "next/link";
 import Servise from "@/app/services/components/servise";
-import {getData} from "@/app/services/data/data";
-const data = getData().servicesData
+import {Data} from "@/app/services/data/data";
+const data = Data.servicesData
 const Services = () => {
     return (
         <div className="wrapper mb-16">
