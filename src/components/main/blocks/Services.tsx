@@ -2,8 +2,8 @@ import React from 'react';
 
 export default function Services() {
     return (
-        <div className="wrapper gap-8 flex flex-col min-h-[30vh]">
-
+        <div className="wrapper gap-8 flex flex-col min-h-[30vh] mb-16">
+            <h2>Услуги</h2>
             <ul className="w-full h-full flex justify-between items-center gap-8 max-sm:flex-col min-h-40">
                 <li className="sm:w-[31%] w-full min-h-40 h-full justify-center bg-red-200 text-center items-center flex">1</li>
                 <li className="sm:w-[31%] w-full min-h-40 h-full justify-center bg-green-200 text-center items-center flex">2</li>

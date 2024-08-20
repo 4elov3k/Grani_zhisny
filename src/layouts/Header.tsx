@@ -9,6 +9,7 @@ import {
     UserCircleIcon
 } from "@heroicons/react/24/outline";
 import {ReactNode} from "react";
+import Link from "next/link";
 
 const telegram: ReactNode = <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24"
                                  viewBox="0 0 24 24">
@@ -23,10 +24,10 @@ export default function Header() {
     return (
         <header className="border-b border-gray-400 mb-24">
             <div className="wrapper items-center flex justify-between">
-                <div className="h-full flex-auto">
+                <a href="/" className="h-full flex-auto">
                     <Image className="object-contain h-24 w-24" src="/logo.jpg" width="800"
                            height="800" alt={'logo'}/>
-                </div>
+                </a>
 
 
                 <div className="flex-auto hidden sm:block">
@@ -36,23 +37,23 @@ export default function Header() {
                         <li><LinkWithIcon href={`mailto:`}
                                           icon={<EnvelopeIcon/>}>email@mail.ru</LinkWithIcon></li>
                         <li><LinkWithIcon href={'https://ya.ru'}
-                                          icon={<MapPinIcon/>}>St.pitersburg</LinkWithIcon></li>
+                                          icon={<MapPinIcon/>}>St.Pitersburg</LinkWithIcon></li>
                     </ul>
                 </div>
 
                 <div className="flex-auto hidden sm:block lg:p-0 px-2">
                     <ul className="font-semibold flex justify-between">
                         <li className="a">
-                            <a className="first-letter:capitalize block hover:text-primary" href="">Обо мне</a>
+                            <Link className="first-letter:capitalize block hover:text-primary" href="/about">Обо мне</Link>
                         </li>
                         <li className="a">
-                            <a className="first-letter:capitalize block hover:text-primary" href="">Услуги</a>
+                            <Link className="first-letter:capitalize block hover:text-primary" href="/services">Услуги</Link>
                         </li>
                         <li className="a">
-                            <a className="first-letter:capitalize block hover:text-primary" href="">Контакты</a>
+                            <a className="first-letter:capitalize block hover:text-primary" href="/contacts">Контакты</a>
                         </li>
                         <li className="a">
-                            <a className="first-letter:capitalize block hover:text-primary" href="">Ресурсы</a>
+                            <a className="first-letter:capitalize block hover:text-primary" href="/resources">Ресурсы</a>
                         </li>
                     </ul>
                 </div>

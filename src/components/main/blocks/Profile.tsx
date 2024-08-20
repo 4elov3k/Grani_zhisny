@@ -11,11 +11,11 @@ const Profile = () => {
     return (
         <div className="wrapper flex max-lg:flex-col mb-16">
             <div className="indent-12 max-lg:w-full w-1/2 mb-8">
-                <h3 className="mb-4">Обо мне</h3>
+                <h2 className="mb-4">Обо мне</h2>
                 {lorem}
             </div>
             <div className="w-1/2 max-lg:w-full p-8">
-                <div className="w-full h-96 bg-blue-400 text-center content-center"> Photo</div>
+                <div className="w-full h-96 bg-blue-400 text-center content-center">Photo</div>
             </div>
 
 
