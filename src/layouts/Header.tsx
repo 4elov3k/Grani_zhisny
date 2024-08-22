@@ -22,7 +22,7 @@ const telegram: ReactNode = <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0
 
 export default function Header() {
     return (
-        <header className="border-b border-gray-400 mb-24">
+        <header className="border-b border-gray-400 mb-12">
             <div className="wrapper items-center flex justify-between">
                 <a href="/" className="h-full flex-auto">
                     <Image className="object-contain h-24 w-24" src="/logo.jpg" width="800"
