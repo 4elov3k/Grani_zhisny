@@ -2,7 +2,7 @@ import React from 'react';
 import Link from "next/link";
 
 
-const ButtonService = ({data}) => {
+const ButtonService = ({data}:any) => {
 
     return (
         <Link href={"services/" + data.href}>

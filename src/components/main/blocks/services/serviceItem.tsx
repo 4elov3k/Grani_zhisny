@@ -3,8 +3,8 @@ import {Data} from "@/app/services/data/data";
 import Image from "next/image";
 import ButtonService from "@/components/main/Button";
 
-const ServiceItem = ({data}) => {
-    const element = Data.servicesData[`${data}`]
+const ServiceItem = ({data}:any) => {
+    const element:any = Data.servicesData[`${data}`]
     return (
         <li className="flex max-lg:flex-col items-center max-md:w-[80%] md:w-[45%] p-4 justify-between bg-violet-100">
             <Image className="shadow-md p-4 m-2 w-48 h-48 object-cover" src={"/services/"+element.img} width='300' height="300" alt='service'/>
