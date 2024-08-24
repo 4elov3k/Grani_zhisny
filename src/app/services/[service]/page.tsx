@@ -1,23 +1,24 @@
 import React from 'react';
 import {notFound} from "next/navigation";
-import {Data, N1, ServicesData,Root} from "@/app/services/data/data";
+import {Data, serviceAttrs, serviceItem} from "@/app/services/data/data";
 import ServiceBody from "@/app/services/[service]/body";
 
 
 
 
-const  servicesData:any = Data.servicesData
+const  groupServices:serviceItem = Data.servicesData
 
-const servisesArr:string[] = Object.keys(servicesData)
-const Service = ({params}:{ params: { service: string } }) => {
+const servisesArr:string[] = Object.keys(groupServices)
+const Service = ({params}:{ params: { service:object } }) => {
     try {
 
-        for (let i = 0; i <= servisesArr.length; i++){
-            const hrefCheck = servicesData[i].href
-            if (hrefCheck === params.service){
+        for (let i:number = 0; i <= servisesArr.length; i++){
+            const hrefCheck:serviceAttrs = groupServices[i.toString()]
+
+            if (hrefCheck.href === params.service.toString()){
 
                 return (
-                    <ServiceBody data={servicesData[i]}/>
+                    <ServiceBody element={i} />
                 )
             }
 

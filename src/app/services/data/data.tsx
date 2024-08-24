@@ -1,6 +1,8 @@
-export const Data:any = {
-    servicesData: {
-        "0": {
+
+
+export const Data:mainData = {
+    servicesData: { //datagroup
+        "0": {//dataitem
             h:'Трансформационная игра «Трансформация»',
             dis: 'Игра “Трансформация”. Это мощнейший инструмент понимания своей жизни, возможность посмотреть на нее со стороны. Это способ прояснить свои цели. Изменить привычный способ взаимоотношений с миром.Когда “застряли” в каком-то аспекте своей жизни, когда нужен толчок, понимание, осознание препятствий, оценка ситуации и перспектив.',
             overview: "Играть можно с любым запросом. С тем, что хочется, чтобы произошло, но никак не получается. Поисследовать ситуацию и себя в ней. Понять, что вы на самом деле хотите и сделать первый шаг в этом направлении.\n" +
@@ -12,7 +14,7 @@ export const Data:any = {
             href: 'game'
         },
         "1": {
-            h: 'Диагностика психолого-энергетического портрета человека',
+            h: "Диагностика психолого-энергетического портрета человека",
             dis: 'Это объемный взгляд на себя и свое состояние на физическом, энергетическом и психологическом уровне. Возможность обратить внимание на то, что, может быть, игнорируется и не осознается.',
             overview: 'В нее входит:\n' +
                 '1. Анализ энергетического состояния организма:\n' +
@@ -69,49 +71,27 @@ export const Data:any = {
 }
 
 
-export const bodyData: any = {
-    aboutText: ""
-}
-export interface Data {
-    key: any
-}
-export interface Root {
-    servicesData: any
+
+
+
+export type serviceAttrs = {
+    h: string; // Заголовок услуги
+    dis: string; // Описание услуги
+    overview: string; // Обзор услуги (опционально)
+    img: string; // Имя изображения
+    href: string; // Ссылка на услугу
 }
 
-export interface ServicesData {
-    "0": N0
-    "1": N1
-    "2": N2
-    "3": N3
+
+
+export type serviceItem = {// Элемент услуг (вся дата для определенной услуги
+    [key: string]: serviceAttrs
+}
+export type mainData = { //Весь объект
+
+    servicesData:serviceItem
+
 }
 
-export interface N0 {
-    h: any
-    dis: any
-    overview: any
-    img: any
-    href: any
-}
 
-export interface N1 {
-    h: any
-    dis: any
-    overview: any
-    img: any
-    href: any
-}
 
-export interface N2 {
-    h: any
-    dis: any
-    overview: any
-    href: any
-}
-
-export interface N3 {
-    h: any
-    dis: any
-    overview: any
-    href: any
-}
