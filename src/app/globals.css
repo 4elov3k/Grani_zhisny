@@ -1,7 +1,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 h1 {
     @apply text-4xl mb-12 ml-16
 }
@@ -9,7 +8,7 @@ h2 {
    @apply text-2xl mb-8
 }
 h3 {
-    @apply text-2xl mb-4 ml-4
+    @apply text-2xl mb-4 font-semibold
 }
 :root {
 
@@ -22,9 +21,9 @@ h3 {
 }
 
 .wrapper {
-    @apply mx-auto md:px-5 xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md max-sm:px-4
+    @apply mx-auto md:px-4 xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md max-sm:px-4
 }
-@media not all and (min-width: 740px) {
+@media not all and (min-width: 768px) {
     .max-sm\:px-4 {
         padding-left: 1rem/* 16px */;
         padding-right: 1rem/* 16px */;
@@ -34,6 +33,7 @@ h3 {
 @media (min-device-pixel-ratio: 1.5) {
     html, body {
         font-size: 24px;
+
     }
 }
 

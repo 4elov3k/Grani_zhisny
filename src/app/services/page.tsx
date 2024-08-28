@@ -5,7 +5,7 @@ import {Data, serviceItem} from "@/app/services/data/data";
 const data:serviceItem = Data.servicesData
 const Services = () => {
     return (
-        <div className="wrapper mb-16">
+        <div className="wrapper">
             <h1>Услуги</h1>
             {Object.keys(data).map((item, i) => <Servise id={`${i}`} key={i} />)}
 

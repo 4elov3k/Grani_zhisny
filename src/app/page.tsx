@@ -1,5 +1,7 @@
 import Image from "next/image";
 import {Services, Profile,Video} from "@/components/main/blocks";
+import {textProfile} from "@/components/main/blocks/Profile";
+
 
 
 
@@ -16,8 +18,10 @@ export default function Home() {
 
           <Image className="mx-auto max-lg:object-contain xl::object-fill" src="/banner.png" alt="img" height="1200" width="2400"/>
         </div>
+          <h2 className="wrapper mb-16">Услуги</h2>
           <Services/>
-          <Profile/>
+          <h2 className="wrapper mb-16">Обо мне</h2>
+          <Profile>{textProfile}</Profile>
           <Video/>
       </div>
   );

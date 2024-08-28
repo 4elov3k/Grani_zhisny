@@ -19,10 +19,10 @@ module.exports = {
       },
       colors: {
         primary: {
-          ...colors.orange,
-          DEFAULT: colors.orange["400"],
-          light: colors.orange["200"],
-          dark: colors.orange["600"]
+          ...colors.teal,
+          DEFAULT: colors.teal["400"],
+          light: colors.teal["200"],
+          dark: colors.teal["600"]
         }
       },
       fontFamily: {
