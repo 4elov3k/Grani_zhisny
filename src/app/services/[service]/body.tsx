@@ -13,7 +13,7 @@ const ServiceBody = ({element}:prop) => {
     const i = element.toString()
     const serviceTitle:string = Data.servicesData[i].h
     const serviceDis:string = Data.servicesData[i].dis
-    const serviceOverview:string = Data.servicesData[i].overview
+    const serviceOverview:string | ReactNode = Data.servicesData[i].overview
     const serviceHref:string = Data.servicesData[i].href
     const serviceImg:string = Data.servicesData[i].img
 
@@ -21,7 +21,7 @@ const ServiceBody = ({element}:prop) => {
     return (
 
         <div className="wrapper justify-between flex max-lg:flex-col-reverse mb-16">
-            <div className="max-lg:w-full w-1/2 my-8 mr-4">
+            <div className="max-lg:w-full w-1/2 mr-4">
                 <p className="indent-12">
                     {serviceOverview}
                 </p>
