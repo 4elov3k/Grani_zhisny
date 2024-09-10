@@ -5,7 +5,7 @@ export const textProfile:string = "Я Ирина Тюрева\n" +
     "психолог, гештальт-терапевт, бизнес-тренер, игропрактик.\n" +
     "\n" +
     "    У меня три высших образования: техническое, психологическое, экономическое.\n" +
-    "    И всем трем я нашла применение на разных этапах  своей профессиональной деятельности.\n" +
+    "    И всем трём я нашла применение на разных этапах  своей профессиональной деятельности.\n" +
     "\n" +
     "    У меня 18 лет управленческого стажа в позиции топ-менеджера в логистике, продажах и управлении персоналом.\n" +
     "    Стаж проведения индивидуальных консультаций и групповых тренингов более 20 лет.\n" +
@@ -35,10 +35,7 @@ const Profile = ({children}: Readonly<{
     return (
         <div className="wrapper justify-between flex max-lg:flex-col-reverse mb-16">
             <div className="max-lg:w-full w-1/2 mb-8">
-
-                <p className="indent-12">
-                    {children}
-                </p>
+                {children}
             </div>
             <div className="lg:p-8 p-4 border h-full mx-auto">
                 <Image className="" src="/profile.jpg" width={'400'} height={'800'} alt={'profile'}/>

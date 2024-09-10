@@ -20,18 +20,18 @@ const ServiceBody = ({element}:prop) => {
 
     return (
 
-        <div className="wrapper justify-between flex max-lg:flex-col-reverse mb-16">
-            <div className="max-lg:w-full w-1/2 mr-4">
-                <p className="indent-12">
-                    {serviceOverview}
-                </p>
-                <Button href={"../../"} title="Заказать услугу" className="mx-auto my-16 md:w-96"/>
+        <div className="wrapper justify-between flex max-lg:flex-col-reverse mb-16 min-h-[70vh]">
+            <div className="max-lg:w-full w-1/2 mr-4 indent-12">
+                
+                {serviceOverview}
+                
+                <Button href={"/form"} title="Заказать услугу" className="mx-auto my-16 md:w-96"/>
 
             </div>
             <div className="lg:p-8 p-4 border h-full mx-auto lg:max-w-1/2">
                 <Image className="" src={"/services/"+serviceImg} width={'800'} height={'800'} alt={'profile'}/>
             </div>
-
+            
         </div>
     );
 };

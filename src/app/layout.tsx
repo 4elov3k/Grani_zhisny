@@ -10,16 +10,18 @@ export const metadata: Metadata = {
   description: "Психолог Ирина Тюрева",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
+export default function RootLayout(props: {
   children: React.ReactNode;
-}>) {
+  modal: React.ReactNode;
+}) {
   return (
     <html lang="en">
       <body className={inter.className}>
+      {props.modal}
+      <div id="modal-root"/>
       <Header/>
-      {children}
+      
+      {props.children}
       <Footer/>
       </body>
     </html>

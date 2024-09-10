@@ -1,8 +1,8 @@
 import Image from "next/image";
 import {Services, Profile, Video} from "@/components/main/blocks";
 import {textProfile} from "@/components/main/blocks/Profile";
-
-
+import Link from "next/link";
+import { Modal } from "./@modal/(.)form/modal";
 export default function Home() {
     return (
         <div className="font-montserrat">
@@ -56,6 +56,8 @@ export default function Home() {
                     <span className="font-bold text-primary-dark m-8">Я верю и знаю — Дорогу осилит идущий.</span>
                 </div>
             </Profile>
+            <Link href="/form">123</Link>
+            
             <Video/>
         </div>
     );
