@@ -16,7 +16,7 @@ export function Modal({children}:{children:React.ReactNode}) {
     }
   }, []);
 
-  function onDismiss(event) {
+  function onDismiss(event:any) {
     if (event.target.tagName === "DIALOG" || event.target.tagName === "BUTTON"){
       router.back();
     }
