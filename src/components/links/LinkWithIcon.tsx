@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function LinkWithIcon({icon, children, href}:{
   icon: ReactNode,
-  children: string,
+  children?: string,
   href: string
 }){
   return (

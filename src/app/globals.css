@@ -54,7 +54,7 @@ body {
   }
   
   .modal-backdrop {
-    
+
     position: relative;
     top: 0;
     left: 0;
@@ -64,10 +64,11 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 1000;
+    z-index: 1;
   }
   
   .modal {
+    z-index: 1000;
     width: 80%;
     max-width: 1200px;
     height: auto;
@@ -76,18 +77,19 @@ body {
     border-radius: 6px;
     background-color: white;
     padding: 20px;
-    position: relative;
+    position: fixed;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 12px;
     font-weight: 500;
+
   }
   
   .close-button {
-    position: fixed;
-    top: 10px;
-    right: 10px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
     width: 48px;
     height: 48px;
     background-color: transparent;
@@ -143,7 +145,7 @@ body {
       width: 80%;
     }
   }
-      
+
 
 
 

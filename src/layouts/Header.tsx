@@ -8,8 +8,10 @@ import {
     ShoppingCartIcon,
     UserCircleIcon
 } from "@heroicons/react/24/outline";
-import {ReactNode} from "react";
+import {ReactNode, useState} from "react";
 import Link from "next/link";
+import { Bars3Icon } from "@heroicons/react/24/solid";
+
 
 const telegram: ReactNode = <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24"
                                  viewBox="0 0 24 24">
@@ -56,8 +58,8 @@ export default function Header() {
                             <a className="first-letter:capitalize block hover:text-primary" href="/resources">Ресурсы</a>
                         </li>
                     </ul>
+                    
                 </div>
-
             </div>
 
         </header>

@@ -1,6 +1,6 @@
-import React, {ReactNode} from 'react';
+import React from 'react';
 import Image from "next/image";
-import Contacts from "@/components/main/blocks/Contacts";
+
 export const textProfile:string = "Я Ирина Тюрева\n" +
     "психолог, гештальт-терапевт, бизнес-тренер, игропрактик.\n" +
     "\n" +

@@ -18,6 +18,7 @@ module.exports = {
         '1/2': '50%'
       },
       colors: {
+
         primary: {
           ...colors.teal,
           DEFAULT: colors.teal["400"],
