@@ -18,7 +18,9 @@ module.exports = {
         '1/2': '50%'
       },
       colors: {
-
+        banner:{
+          default: '#fffed7'
+        },
         primary: {
           ...colors.teal,
           DEFAULT: colors.teal["400"],

@@ -6,7 +6,7 @@ import Button from "@/components/main/Button";
 const ServiceItem = ({data}:{data:string}) => {
     const element:serviceAttrs = Data.servicesData[`${data}`]
     return (
-        <li className="flex max-lg:flex-col items-center max-md:w-[80%] md:w-[47%] p-4 bg-violet-50">
+        <li className="flex max-lg:flex-col items-center max-md:w-[80%] md:w-[47%] p-4 bg-violet-50 lg:h-64">
             <Image className="shadow-md p-4 m-2 w-48 h-48 object-cover" src={"/services/"+element.img} width='300' height="300" alt='service'/>
             <div className="h-full flex flex-col ">
                 <h3 className="text-sm text-center">{element.h}</h3>
