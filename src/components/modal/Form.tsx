@@ -4,7 +4,7 @@ import React from 'react';
 const Form = () => {
 
     return (
-        <div className="bg-white w-full h-full p-6">
+        <div className="bg-white w-full h-full p-6 rounded-b-md">
             <h2 className="text-2xl font-semibold text-gray-800 mb-6">Свяжитесь со мной</h2>
             <form>
                 <div className="mb-4">

@@ -3,27 +3,27 @@ import Image from "next/image";
 
 const Banner = () => {
     return (
-        <div className="w-full bg-fixed bg-banner-default h-[80vh] font-bold" style={{
+        <div className="mb-16 w-full bg-fixed bg-banner-default lg:h-[80vh] font-bold" style={{
             backgroundImage: "url(" + "./banner.png" + ")",
             backgroundPosition: 'center',
             backgroundSize: 'cover',
             backgroundRepeat: 'no-repeat'
         }}>
-            <div className="max-lg:wrapper border flex h-full">
-                <div className="w-1/2 content-center text-center text-4xl">
-                    <div className=" backdrop-blur-xl bg-primary bg-opacity-[3%] mt-16 p-8 w-full text-shadow-primary rounded rounded-xl text-6xl text-primary-dark">
-                        <span>Грани Разумного</span>
-                        <p className="indent-8 font-extralight text-[24px] p-8 text-black">Что-то умное тут можно написать красиво и фотку справа поменять</p>
+            <div className="max-lg:wrapper border max-lg:flex-col flex lg:h-full">
+                <div className="max-lg:flex justify-center content-center lg:w-1/2 text-center mb-16">
+                    <div className="lg:mx-auto backdrop-blur-xl bg-primary bg-opacity-[2%] mt-16 p-4 lg:p-8 lg:w-[80%] text-shadow-primary rounded rounded-xl text-3xl lg:text-6xl text-primary-dark">
+                        <span className="justify-center">Грани Разумного</span>
+                        <p className="lg:indent-8 font-extralight text-[18px] p-8 text-black">Психолог Ирина Тюрева</p>
                     </div>
                 </div>
 
-                <div className="w-1/2 content-center ">
-                    <div className="w-full h-1/2 font-light"><Image className="object-contain h-full w-full" src="/profile.jpg" width={300} height={500} alt={''}></Image>
-                    Прям даже сделать какой-нибудь список формата:
-                        <ul className="justify-center content-center text-left border w-48 p-4 m-auto font-extralight backdrop-blur-xl bg-primary bg-opacity-[3%] mx-auto my-4">
-                            <li>Коуч</li>
-                            <li>Профессионал</li>
-                            <li>Целитель</li>
+                <div className="lg:w-1/2 lg:h-full flex justify-center content-center items-center">
+                    <div className="font-light"><Image className="w-full h-full" src="/profile.jpg" width={300} height={500} alt={''}></Image>
+
+                        <ul className="pl-6 list-disc rounded-sm w-48 text-left mx-auto p-4 font-extralight backdrop-blur-xl bg-primary bg-opacity-[2%] my-4">
+                            <li>Психолог</li>
+                            <li>Гештальт-терапевт</li>
+                            <li>Бизнес-тренер</li>
                         </ul>
                     </div>
 

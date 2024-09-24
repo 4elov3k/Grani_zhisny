@@ -2,15 +2,14 @@ import Image from "next/image";
 import {LinkWithIcon} from "@/components/links";
 import {
     EnvelopeIcon,
-    MagnifyingGlassIcon,
     MapPinIcon,
-    PhoneIcon,
-    ShoppingCartIcon,
-    UserCircleIcon
-} from "@heroicons/react/24/outline";
-import {ReactNode, useState} from "react";
+}
+from "@heroicons/react/24/outline";
+import React, {MouseEventHandler, ReactNode, useState} from "react";
 import Link from "next/link";
-import { Bars3Icon } from "@heroicons/react/24/solid";
+import BurgerButton from "@/components/buttons/BurgerButton";
+import Nav from "@/components/header/Nav";
+import SideNav from "@/components/main/sideNav";
 
 
 const telegram: ReactNode = <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24"
@@ -23,17 +22,19 @@ const telegram: ReactNode = <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0
 
 
 export default function Header() {
+console.log("rerender Header")
+
     return (
         <header className="border-b border-gray-400 mb-12">
-            <div className="wrapper items-center flex justify-between">
-                <a href="/" className="h-full flex-auto">
+            <div className="wrapper items-center flex justify-between gap-16  relative">
+                <a href="/" className="h-full flex-auto max-w-36">
                     <Image className="object-contain h-24 w-24" src="/logo.jpg" width="800"
                            height="800" alt={'logo'}/>
                 </a>
 
 
-                <div className="flex-auto hidden sm:block">
-                    <ul className="flex  flex-col h-full p-2 justify-between">
+                <div className="flex-auto max-w-40 hidden sm:block">
+                    <ul className="flex flex-row flex-wrap w-full h-full p-2 justify-between max-md:text-[10px]">
                         <li><LinkWithIcon href={`tel:`}
                                           icon={telegram}>+799999999</LinkWithIcon></li>
                         <li><LinkWithIcon href={`mailto:`}
@@ -43,23 +44,16 @@ export default function Header() {
                     </ul>
                 </div>
 
-                <div className="flex-auto hidden sm:block lg:p-0 px-2">
-                    <ul className="font-semibold flex justify-between">
-                        <li className="a">
-                            <Link className="first-letter:capitalize block hover:text-primary" href="/about">Обо мне</Link>
-                        </li>
-                        <li className="a">
-                            <Link className="first-letter:capitalize block hover:text-primary" href="/services">Услуги</Link>
-                        </li>
-                        <li className="a">
-                            <a className="first-letter:capitalize block hover:text-primary" href="/contacts">Контакты</a>
-                        </li>
-                        <li className="a">
-                            <a className="first-letter:capitalize block hover:text-primary" href="/resources">Ресурсы</a>
-                        </li>
+                <div className="flex-auto hidden sm:block lg:p-0 px-2 max-w-xl max-md:text-[10px]">
+                    <ul className="font-semibold flex justify-between gap-2">
+                        <Nav/>
                     </ul>
-                    
+
+
                 </div>
+                <SideNav/>
+
+
             </div>
 
         </header>
