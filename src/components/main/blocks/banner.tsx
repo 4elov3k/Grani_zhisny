@@ -3,15 +3,16 @@ import Image from "next/image";
 
 const Banner = () => {
     return (
-        <div className="mb-16 w-full bg-fixed bg-banner-default lg:h-[80vh] font-bold" style={{
+        <div className="mb-16 w-full bg-fixed lg:h-[80vh] font-bold" style={{
             backgroundImage: "url(" + "./banner.png" + ")",
             backgroundPosition: 'center',
             backgroundSize: 'cover',
-            backgroundRepeat: 'no-repeat'
+            backgroundRepeat: 'no-repeat',
+            
         }}>
-            <div className="max-lg:wrapper border max-lg:flex-col flex lg:h-full">
+            <div className="max-lg:wrapper max-lg:flex-col flex lg:h-full">
                 <div className="max-lg:flex justify-center content-center lg:w-1/2 text-center mb-16">
-                    <div className="lg:mx-auto backdrop-blur-xl bg-primary bg-opacity-[2%] mt-16 p-4 lg:p-8 lg:w-[80%] text-shadow-primary rounded rounded-xl text-3xl lg:text-6xl text-primary-dark">
+                    <div className="lg:mx-auto lg:backdrop-blur-xl bg-primary bg-opacity-[2%] mt-16 p-4 lg:p-8 lg:w-[80%] text-shadow-primary rounded rounded-xl text-3xl lg:text-6xl text-primary-dark">
                         <span className="justify-center">Грани Разумного</span>
                         <p className="lg:indent-8 font-extralight text-[18px] p-8 text-black">Психолог Ирина Тюрева</p>
                     </div>

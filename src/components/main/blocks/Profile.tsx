@@ -38,7 +38,7 @@ const Profile = ({children}: Readonly<{
                 {children}
             </div>
             <div className="lg:p-8 p-4 border h-full mx-auto">
-                <Image className="" src="/profile.jpg" width={'400'} height={'800'} alt={'profile'}/>
+                <Image placeholder='blur' blurDataURL='data:' className="" src="/profile.jpg" width={'400'} height={'800'} alt={'profile'}/>
             </div>
 
         </div>
