@@ -1,24 +1,24 @@
 import React from 'react';
 import Link from "next/link";
 
-const Nav = () => {
+const Nav = ({childStyle}:{childStyle?: string}) => {
     return (
         <>
-            <li className="a">
+            <li className={childStyle+" a"}>
                 <Link className="first-letter:capitalize block hover:text-primary" href="/about">Обо
                     мне</Link>
             </li>
-            <li className="a">
+            <li className={childStyle+" a"}>
                 <Link className="first-letter:capitalize block hover:text-primary"
                       href="/services">Услуги</Link>
             </li>
-            <li className="a">
+            <li className={childStyle+" a"}>
                 <a className="first-letter:capitalize block hover:text-primary"
                    href="/contacts">Контакты</a>
             </li>
-            <li className="a">
+            <li className={childStyle+" a"}>
                 <a className="first-letter:capitalize block hover:text-primary"
-                   href="/resources">Ресурсы</a>
+                   href="/blog">блог</a>
             </li>
         </>
     );

@@ -16,7 +16,7 @@ async function sendMail(data:dataSendMail) {
   const phone = data?.phone
   const message = data?.message
   const link = data?.link
-
+  console.log(name, email,message)
   const formattedBody = `
     <html>
       <body>
@@ -48,14 +48,18 @@ async function sendMail(data:dataSendMail) {
 
 
 
-export async function POST(request: Request) {
+export async function POST(request: Request):Promise<NextResponse> {
   request.json
+ 
   const data = await request.json()
-  const req = await sendMail({...data.data}).then((req)=>{
+  
+  if (data.email == undefined || data.name == undefined || data.message == undefined){
+    
+    return NextResponse.json({}, {status: 400})
+  }
+  const req = await sendMail({...data}).then((req)=>{
     
   })
-  
-
 
 
 

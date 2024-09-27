@@ -18,7 +18,7 @@ export function Modal({children}:{children:React.ReactNode}) {
 
   function onDismiss(event:any) {
     if (event.target.tagName === "DIALOG" || event.target.tagName === "BUTTON"){
-      router.back();
+      setTimeout(router.back, 4000) ;
     }
 
 

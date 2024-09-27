@@ -6,7 +6,7 @@ import { Modal } from "./@modal/(.)form/modal";
 import Banner from "@/components/main/blocks/banner";
 export default function Home() {
     return (
-        <div className="">
+        <>
             <Banner/>
             <h2 className="wrapper mb-16">Услуги</h2>
             <Services/>
@@ -52,6 +52,6 @@ export default function Home() {
 
 
             <Video/>
-        </div>
+        </>
     );
 }

@@ -9,7 +9,9 @@ import React, {MouseEventHandler, ReactNode, useState} from "react";
 import Link from "next/link";
 import BurgerButton from "@/components/buttons/BurgerButton";
 import Nav from "@/components/header/Nav";
+
 import SideNav from "@/components/main/sideNav";
+import Logo from "@/components/header/Logo";
 
 
 const telegram: ReactNode = <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24"
@@ -22,15 +24,10 @@ const telegram: ReactNode = <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0
 
 
 export default function Header() {
-console.log("rerender Header")
-
     return (
         <header className="border-b border-gray-400 mb-12">
             <div className="wrapper items-center flex justify-between gap-16  relative">
-                <a href="/" className="h-full flex-auto max-w-36">
-                    <Image className="object-contain h-24 w-24" src="/logo.jpg" width="800"
-                           height="800" alt={'logo'}/>
-                </a>
+                <Logo/>
 
 
                 <div className="flex-auto max-w-40 hidden sm:block">

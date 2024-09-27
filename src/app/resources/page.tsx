@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Resources = () => {
+const Blog = () => {
     return (
         <div className='wrapper'>
-            <h1>Resources</h1>
+            <h1>Blog</h1>
         </div>
     );
 };
 
-export default Resources;
+export default Blog;

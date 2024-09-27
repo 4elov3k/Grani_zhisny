@@ -21,7 +21,9 @@ export default function RootLayout(props: {
       <div id="modal-root"/>
       <Header/>
       
+      <article className="min-h-[80vh]">
       {props.children}
+      </article>
       <Footer/>
       </body>
     </html>
